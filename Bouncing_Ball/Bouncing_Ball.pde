@@ -1,7 +1,7 @@
 //Variabler
 float SquX=0, SquY=0, SquSize=500;
 float ballX=21, ballY=21, ballR=30;
-float ballSpX=2.5, ballSpY=2.5, SquSp=.1;
+float ballSpX=3.5, ballSpY=3.5, SquSp=.1;
 
 //setup køres
 void setup() {

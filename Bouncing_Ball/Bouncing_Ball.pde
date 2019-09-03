@@ -41,7 +41,7 @@ void move() {
   if (ballY>SquSize+SquY-ballR/2) {
     ballSpY=-sqrt(sq(ballSpY))+0.1;
   } else if (ballY<SquY+ballR/2) {
-    ballSpY=sqrt(sq(ballSpY))-0.1;
+    ballSpY=sqrt(sq(ballSpY));
   }
 }
 

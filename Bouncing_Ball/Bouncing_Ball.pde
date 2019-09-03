@@ -1,7 +1,7 @@
 //Variabler
 float SquX=0, SquY=0, SquSize=500;
 float ballX=21, ballY=21, ballR=30;
-float ballSpX=2, ballSpY=2, SquSp=.1;
+float ballSpX=2.5, ballSpY=2.5, SquSp=.1;
 
 //setup køres
 void setup() {
@@ -32,16 +32,16 @@ void move() {
 
   //bolden skal vende om når den rammer en af kvadratets vertikale linjer
   if (ballX<SquX+ballR/2) {
-    ballSpX=sqrt(sq(ballSpX+0.1));
+    ballSpX=sqrt(sq(ballSpX));
   } else if (ballX>SquSize+SquX-ballR/2) {
-    ballSpX=-sqrt(sq(ballSpX-0.1));
+    ballSpX=-sqrt(sq(ballSpX));
   }
 
   //bolden skal vende om når den rammer en af kvadratets horisontale linjer
   if (ballY>SquSize+SquY-ballR/2) {
-    ballSpY=-sqrt(sq(ballSpY+0.1));
+    ballSpY=-sqrt(sq(ballSpY))+0.1;
   } else if (ballY<SquY+ballR/2) {
-    ballSpY=sqrt(sq(ballSpY-0.1));
+    ballSpY=sqrt(sq(ballSpY))-0.1;
   }
 }
 

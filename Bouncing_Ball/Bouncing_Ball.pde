@@ -10,17 +10,18 @@ void setup() {
 
 //figurtegningsfunktion
 void figur() {
+  //kvadratet har hvide kanter og sort udfyldning.
   stroke(255);
   fill(0);
   square(SquX, SquY, SquSize);
+  //bolden laves blå og kanten fjernes
   fill(12, 50, 200);
   noStroke();
-  ellipse(ballX, ballY, ballR, ballR);
+  circle(ballX, ballY, ballR);
 }
 
 //bevægelsesfunktion
 void move() {
-
   //kvadratets bevægelser
   SquX+=SquSp;
   SquY+=SquSp;
@@ -50,7 +51,7 @@ void draw() {
   clear();
   move();
   figur();
-  if (SquSize<ballR+30){
+  if (SquSize<ballR+30) {
     noLoop();
   }
 }
